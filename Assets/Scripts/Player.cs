@@ -3,8 +3,6 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _healthChenged;
-
     private float _health = 100;
     private float _damage = 10;
     private float _healing = 10;
@@ -13,6 +11,8 @@ public class Player : MonoBehaviour
 
     public float Health => _health;
 
+    [SerializeField] private UnityEvent _healthChenged;
+    
     public void TakeDamage()
     {
         if (_health > _minHealth)
